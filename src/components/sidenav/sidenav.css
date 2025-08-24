@@ -1,0 +1,4 @@
+.sidenav {
+    flex-shrink: 0;
+    --mdc-sidenavigation-vertical-divider-button-z-index: 2000;
+}

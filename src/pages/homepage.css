@@ -1,0 +1,34 @@
+.home-page-wrapper {
+    --local-padding: 1.5rem;
+    height: calc(100% - 2 * var(--local-padding));
+    width: calc(100% - 2 * var(--local-padding));
+    border-top-left-radius: 1rem;
+    background-color: var(--mds-color-theme-background-glass-light);
+    padding: var(--local-padding);
+
+    /* TODO: this needs to be a momentum-design token, replace once available: */
+    backdrop-filter: blur(400px);
+}
+
+.home-page-header {
+    height: 4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.home-page-left-section {
+    display: flex;
+    align-items: center;
+}
+
+.home-page-middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-page-middle-section-first-line{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
