@@ -3,13 +3,13 @@ import { Avatar, Appheader, Button, Brandvisual, Searchfield, Divider, Badge } f
 import './header.css';
 
 interface HeaderProps {
-  setIsSideNavCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsSideNavExpanded: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: React.FC<HeaderProps> = ({setIsSideNavCollapsed}: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({setIsSideNavExpanded}: HeaderProps) => {
 
   const handleSideNavToggle = () => {
-    setIsSideNavCollapsed((prevState: boolean) => !prevState);
+    setIsSideNavExpanded((prevState: boolean) => !prevState);
   };  
 
   return (

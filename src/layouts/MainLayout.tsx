@@ -9,13 +9,13 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
-  const [isSideNavCollapsed, setIsSideNavCollapsed] = useState(true)
+  const [isSideNavExpanded, setIsSideNavExpanded] = useState(true)
   return (
     <div className="background-base">
       <div className="background">
-        <Header setIsSideNavCollapsed={setIsSideNavCollapsed} />
+        <Header setIsSideNavExpanded={setIsSideNavExpanded} />
         <div className="main-layout">
-          <SideNavigation isSideNavCollapsed={isSideNavCollapsed} setIsSideNavCollapsed={setIsSideNavCollapsed} />
+          <SideNavigation isSideNavExpanded={isSideNavExpanded} setIsSideNavExpanded={setIsSideNavExpanded} />
           <main>
             {/* NOTE: This is where the main content of the page will be rendered */}
             {children}

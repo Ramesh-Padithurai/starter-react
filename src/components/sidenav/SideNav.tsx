@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { SideNavigation, MenuSection, NavMenuItem, Icon } from '@momentum-design/components/react'
 import './sidenav.css';
 
 interface SideNavProps {
-  isSideNavCollapsed: boolean;
-  setIsSideNavCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
+    isSideNavExpanded: boolean;
+    setIsSideNavExpanded: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-// there is currently a bug where the SideNavigation component doesn't have a callback which listens for the toggle event
-// of the divider button. Once fixed, we want to connect the setIsSideNavCollapsed prop to the toggle event
-// so that the state of the sidenav can be controlled from the parent component.
-const SideNav: React.FC<SideNavProps>= ({isSideNavCollapsed}: SideNavProps) => {
+const SideNav: React.FC<SideNavProps> = ({ isSideNavExpanded, setIsSideNavExpanded }: SideNavProps) => {
+
+    const handleSideNavToggle = useCallback(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (e: any) => {
+            const newToggleState = e.detail.expanded;
+            setIsSideNavExpanded(newToggleState);
+        }, [setIsSideNavExpanded],
+    );
+
     return (
         <>
-            <SideNavigation expanded={isSideNavCollapsed} variant="flexible" footerText="Customer Name" grabberBtnAriaLabel="Toggle Side navigation" parentNavTooltipText="Contains active navmenuitem" className="sidenav">
+            <SideNavigation expanded={isSideNavExpanded} onToggle={handleSideNavToggle} variant="flexible" footerText="Customer Name" grabberBtnAriaLabel="Toggle Side navigation" parentNavTooltipText="Contains active navmenuitem" className="sidenav">
                 <MenuSection slot="scrollable-menubar" showDivider>
                     <NavMenuItem iconName="placeholder-regular" navId="1" label="Label"></NavMenuItem>
                     <NavMenuItem iconName="placeholder-regular" navId="2" label="Label"></NavMenuItem>
