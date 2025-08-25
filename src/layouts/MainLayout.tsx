@@ -6,14 +6,16 @@ import './mainlayout.css';
 
 interface MainLayoutProps {
   children: React.ReactNode;
+  theme: 'dark' | 'light';
+  setTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, theme, setTheme }) => {
   const [isSideNavExpanded, setIsSideNavExpanded] = useState(true)
   return (
     <div className="background-base">
       <div className="background">
-        <Header setIsSideNavExpanded={setIsSideNavExpanded} />
+        <Header setIsSideNavExpanded={setIsSideNavExpanded} theme={theme} setTheme={setTheme} />
         <div className="main-layout">
           <SideNavigation isSideNavExpanded={isSideNavExpanded} setIsSideNavExpanded={setIsSideNavExpanded} />
           <main>
