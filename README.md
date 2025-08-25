@@ -7,7 +7,7 @@ This starter repository includes a basic React app setup using [Momentum Design 
 
 ## Caveats
 
-This repository is a Starter Kit only - it is not optimised for production and should not be used for production purposes without adjustments to the build tooling etc.
+This repository is a Starter Kit only - it is not optimised for production and should not be used for production purposes without adjustments to the build tooling & code.
 Vite is bundling all assets like icons, brand-visuals, animations etc as part of the dist without analyzing the exact usage
 and which assets are actually required. This has to be fixed as part of making it production ready.
 
