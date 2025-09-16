@@ -32,3 +32,35 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+.home-page-controls-row {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.home-page-table {
+    margin-top: 1rem;
+}
+
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.simple-table th,
+.simple-table td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--mds-color-theme-outline-default);
+}
+
+.simple-table thead th {
+    background: var(--mds-color-theme-background-tertiary);
+}
+
+.simple-table-empty {
+    text-align: center;
+    color: var(--mds-color-theme-text-secondary);
+}

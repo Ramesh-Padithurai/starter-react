@@ -21,7 +21,7 @@ const SideNav: React.FC<SideNavProps> = ({ isSideNavExpanded, setIsSideNavExpand
         <>
             <SideNavigation expanded={isSideNavExpanded} onToggle={handleSideNavToggle} variant="flexible" footerText="Customer Name" grabberBtnAriaLabel="Toggle Side navigation" parentNavTooltipText="Contains active navmenuitem" className="sidenav">
                 <MenuSection slot="scrollable-menubar" showDivider>
-                    <NavMenuItem iconName="placeholder-regular" navId="1" label="Label"></NavMenuItem>
+                    <NavMenuItem iconName="home-bold" navId="1" label="Home"></NavMenuItem>
                     <NavMenuItem iconName="placeholder-regular" navId="2" label="Label"></NavMenuItem>
                     <NavMenuItem iconName="placeholder-regular" navId="3" label="Label"></NavMenuItem>
                 </MenuSection>
