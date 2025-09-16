@@ -10,110 +10,19 @@
     backdrop-filter: blur(400px);
 }
 
-.home-page-header {
-    height: 4rem;
+.contact-form {
+    max-width: 640px;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.home-page-left-section {
+.contact-row {
     display: flex;
-    align-items: center;
 }
 
-.home-page-middle-section {
+.contact-actions {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.home-page-middle-section-first-line{
-    display: flex;
-    align-items: center;
     gap: 0.5rem;
-}
-
-.home-page-controls-row {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.home-page-table {
-    margin-top: 1rem;
-}
-
-.simple-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.simple-table th,
-.simple-table td {
-    text-align: left;
-    padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid var(--mds-color-theme-outline-default);
-}
-
-.simple-table thead th {
-    background: var(--mds-color-theme-background-tertiary);
-}
-
-.simple-table-empty {
-    text-align: center;
-    color: var(--mds-color-theme-text-secondary);
-}
-
-.home-page-form {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.form-row {
-    display: flex;
-    gap: 1rem;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.channel-card {
-    border: 1px solid var(--mds-color-theme-outline-default);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    background: var(--mds-color-theme-background-secondary);
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.channel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.channel-fields {
-    display: grid;
-    grid-template-columns: minmax(200px, 300px) 1fr;
-    gap: 1rem;
-}
-
-.chips-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.form-footer {
-    margin-top: 0.5rem;
-    display: flex;
     justify-content: flex-end;
-    gap: 0.5rem;
 }
