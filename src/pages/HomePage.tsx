@@ -14,7 +14,6 @@ const HomePage: React.FC = () => {
             <div className="contact-form">
                 <Text type="heading-midsize-bold" tagname='h1'>Contact us</Text>
                 <div className="contact-row">
-                    <p>Happy learning! happy coding!</p>
                     <Input 
                         label="Name" 
                         placeholder="Jane Doe"
